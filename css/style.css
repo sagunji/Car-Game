@@ -1,0 +1,71 @@
+.wrapper{
+	width: 800px;
+  /*height: 800px;*/
+  	position: relative;
+  	text-align: center;
+  	margin: 0 auto;
+    background-image: url('../images/grass.png');
+    background-repeat: repeat;
+}
+.container{
+	/*width: 800px;
+  height: 600px;*/
+  margin: 0 auto;
+  /*position: relative;
+  overflow: hidden;*/
+ 
+  /*background-color: red;*/
+}
+.road {
+  /*width: 800px;
+  height: 100000px;*/
+  /*background: url('../images/road.png');*/
+  margin: 0 auto;
+  /*position: absolute;*/
+  /*z-index: 5;*/
+  /*bottom: 0px;*/
+}
+.main-car{
+	width: 80px;
+	height: 100px;
+	position: absolute;
+	/*background: url('../images/myCar.png'); */
+	z-index:10;
+	/*left: 380px;
+	top: 490px;*/
+}
+.enemy-car{
+	width: 80px;
+	height: 100px;
+	position: absolute;
+	z-index:10;
+	background: url('../images/enemyCar.png'); 
+
+}
+.game-over{
+  width: 400px;
+  height: 600px;
+  background-image: url("../images/game-over.png");
+  position: absolute;
+  z-index: 20;
+  top: 0px;
+  margin-left: 220px;
+}
+.scoreMessage{
+  position: absolute;
+  top: 100px;
+  left: 
+}
+.bullet{
+  /*background-image: url('../images/bullet.png');*/
+  /*width: */
+}
+.score{
+  /*float: left;*/
+  position: 'absolute';
+  width: 162px;
+  height: 100px;
+  background-color: red;
+  left: 0px;
+  top:100px;
+}
