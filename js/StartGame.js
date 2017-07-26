@@ -19,6 +19,7 @@ function StartGame(){
   var dynRoad;
 
   var nBullets = 20;
+  var scoreBoard; 
 
 	this.init = function(){
     // debugger;
@@ -31,6 +32,10 @@ function StartGame(){
     dynRoad = new DynRoad('road');
     dynRoad.create();
     contain.appendElement(dynRoad.element);
+
+    var scoreBoard = new ScoreBoard();
+    scoreBoard.create();
+    contain.appendElement(scoreBoard.element);
 
 		car = new Car();
     car.setPosition(390, 490);
@@ -56,7 +61,10 @@ function StartGame(){
       // that.removeObstacles();
       that.moveBullet();
       that.refillBullet();
-      score++;
+      // score++;
+      // console.log(that.scoreBoard);
+      that.setScore(score++);
+      // (that.scoreBoard.changeScore(score++));
       // console.log();
     }, 5);
 	}
@@ -247,7 +255,7 @@ function StartGame(){
     gameOverElement = document.createElement('div');
     gameOverElement.className += 'game-over';
     mainContainer.appendChild(gameOverElement);
-    alert('Your Score Is: '+ score);
+    // alert('Your Score Is: '+ score);
   }
   this.resetGame = function(){
     gameOverElement.style.display = 'none';
@@ -271,9 +279,18 @@ function StartGame(){
     allBullets = [];
     nBullets = 20;
     // debugger;
+    mainContainer.removeChild(document.getElementById('scr-board'));
+    // scoreBoard.destroyScoreBoard(mainContainer);
     // dynRoad.delete(containontainer);
     // contain.delete(wrapper);
     that.init();
+  }
+  this.setScore = function(score){
+    // that.scoreBoard.changeScore(score);
+    // console.log(scoreBoard);
+    var ele = document.getElementById('scr-board');
+    ele.innerHTML = score;
+
   }
 
 }
