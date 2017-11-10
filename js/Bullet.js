@@ -9,7 +9,7 @@ function Bullet(x, y){
 	this.create = function(){
 		that.element.style.width = that.width + 'px';
 		that.element.style.height = that.height + 'px';
-		that.element.style.background = "url('./images/Bullet.png')";
+		that.element.style.background = "url('./images/bullet.png')";
 		that.element.style.backgroundRepeat = 'no-repeat';
 		that.setBulletPosition(that.x, that.y);
 		that.element.style.position = 'absolute';
